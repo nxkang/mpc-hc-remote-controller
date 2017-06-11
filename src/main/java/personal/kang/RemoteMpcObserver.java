@@ -18,7 +18,7 @@ import java.util.Observer;
  * Created by kang on 2017/6/10.
  */
 @Component
-public class RemoteMpcObserver  implements MpcObserver {
+public class RemoteMpcObserver implements MpcObserver {
 
     Logger LOGGER = LoggerFactory.getLogger(RemoteMpcObserver.class);
 
@@ -79,6 +79,8 @@ public class RemoteMpcObserver  implements MpcObserver {
                 this.play();
             } else if (event == MpcEvent.PAUSE) {
                 this.pause();
+            } else if (event == MpcEvent.SYNC) {
+                this.sync();
             } else {
                 LOGGER.info("can't execute {}", arg.toString());
             }

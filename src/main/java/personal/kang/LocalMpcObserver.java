@@ -71,6 +71,8 @@ public class LocalMpcObserver implements MpcObserver {
                 this.play();
             } else if (event == MpcEvent.PAUSE) {
                 this.pause();
+            } else if (event == MpcEvent.SYNC) {
+                LOGGER.info("don't need execute sync.");
             } else {
                 LOGGER.info("can't execute {}", arg.toString());
             }

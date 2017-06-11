@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9134012-4eca-4080-a87e-885cb67a3491" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/personal/kang/Main.java" afterPath="$PROJECT_DIR$/src/main/java/personal/kang/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/personal/kang/LocalMpcObserver.java" afterPath="$PROJECT_DIR$/src/main/java/personal/kang/LocalMpcObserver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/personal/kang/RemoteMpcObserver.java" afterPath="$PROJECT_DIR$/src/main/java/personal/kang/RemoteMpcObserver.java" />
     </list>
     <ignored path="mpc-hc-controller.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,12 +39,22 @@
       <file leaf-file-name="RemoteMpcObserver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/personal/kang/RemoteMpcObserver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+            <state relative-caret-position="483">
+              <caret line="83" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
               <folding>
-                <element signature="e#871#872#0" expanded="true" />
-                <element signature="e#915#916#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#914#915#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocalMpcObserver.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/personal/kang/LocalMpcObserver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/personal/kang/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="504">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="method#showMainView#0;class#Main#0" expanded="false" />
               </folding>
@@ -135,11 +146,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/integration/spring-int-jms-client.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/jms.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/integration/spring-int-jms-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/personal/kang/LocalMpcObserver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/personal/kang/RemoteMpcObserver.java" />
         <option value="$PROJECT_DIR$/src/main/java/personal/kang/RemoteMpcService.java" />
         <option value="$PROJECT_DIR$/src/main/java/personal/kang/RemoteMpcServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/personal/kang/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/personal/kang/RemoteMpcObserver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/personal/kang/LocalMpcObserver.java" />
       </list>
     </option>
   </component>
@@ -957,7 +968,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1497004399391</updated>
-      <workItem from="1497004403056" duration="48602000" />
+      <workItem from="1497004403056" duration="49349000" />
     </task>
     <servers />
   </component>
@@ -994,7 +1005,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48602000" />
+    <option name="totallyTimeSpent" value="49349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -1310,30 +1321,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/personal/kang/LocalMpcObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/personal/kang/MpcObserver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/personal/kang/RemoteMpcObserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
-          <folding>
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1357,11 +1349,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/personal/kang/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="504">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="method#showMainView#0;class#Main#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/personal/kang/RemoteMpcObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="83" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
+          <folding>
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/personal/kang/LocalMpcObserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
