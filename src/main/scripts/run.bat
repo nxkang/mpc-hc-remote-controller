@@ -1,0 +1,1 @@
+java -classpath ../lib/*.jar personal.kang.Main

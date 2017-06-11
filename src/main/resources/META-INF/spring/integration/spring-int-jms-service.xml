@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xmlns:jms="http://www.springframework.org/schema/integration/jms"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd http://www.springframework.org/schema/integration/jms http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd">
+
+    <context:annotation-config/>
+
+    <int:channel
+            id="inboundMpcRequestsChannel"/>
+    <!--<int:channel-->
+            <!--id="outboundPlayResultsChannel"/>-->
+
+    <bean
+            id="remoteMpcServiceImpl"
+            class="personal.kang.RemoteMpcServiceImpl"/>
+
+    <jms:inbound-gateway
+            request-channel="inboundMpcRequestsChannel"
+            request-destination-name="inboundMpcDestination"
+            connection-factory="jmsConnectionFactory"/>
+
+    <int:header-value-router input-channel="inboundMpcRequestsChannel" header-name="cmd" default-output-channel="inboundSyncChannel">
+        <int:mapping value="play" channel="inboundPlayChannel"></int:mapping>
+        <int:mapping value="pause" channel="inboundPauseChannel"></int:mapping>
+        <int:mapping value="sync" channel="inboundSyncChannel"></int:mapping>
+    </int:header-value-router>
+
+    <int:service-activator
+            input-channel="inboundPlayChannel"
+            ref="remoteMpcServiceImpl"
+            method="play"/>
+
+    <int:service-activator
+            input-channel="inboundPauseChannel"
+            ref="remoteMpcServiceImpl"
+            method="pause"/>
+
+    <int:service-activator
+            input-channel="inboundSyncChannel"
+            ref="remoteMpcServiceImpl"
+            method="sync"/>
+
+</beans>
