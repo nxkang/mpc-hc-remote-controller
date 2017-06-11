@@ -1,6 +1,8 @@
 package personal.kang;
 
 import com.eeeeeric.mpc.hc.api.MediaPlayerClassicHomeCinema;
+import com.eeeeeric.mpc.hc.api.TimeCode;
+import com.eeeeeric.mpc.hc.api.TimeCodeException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.integration.support.MessageBuilder;
@@ -43,10 +45,14 @@ public class RemoteMpcServiceImpl {
 
     }
 
-    public void sync() {
+    public void sync(TimeCode timeCode) {
 
         LOGGER.debug("sync...");
 
-
+        try {
+            mpc.seek(timeCode);
+        } catch (IOException | TimeCodeException e) {
+            LOGGER.error(e.getMessage(), e);
+        }
     }
 }

@@ -1,5 +1,8 @@
 package personal.kang;
 
+import com.eeeeeric.mpc.hc.api.MediaPlayerClassicHomeCinema;
+import com.eeeeeric.mpc.hc.api.TimeCode;
+import com.eeeeeric.mpc.hc.api.TimeCodeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +21,9 @@ import java.util.Observer;
 public class RemoteMpcObserver  implements MpcObserver {
 
     Logger LOGGER = LoggerFactory.getLogger(RemoteMpcObserver.class);
+
+    @Autowired
+    private MediaPlayerClassicHomeCinema mpc;
 
     @Autowired
     private RemoteMpcService remoteMpcService;
@@ -52,7 +58,14 @@ public class RemoteMpcObserver  implements MpcObserver {
 
         LOGGER.debug("sync...");
 
-        remoteMpcService.sync();
+        try {
+
+            TimeCode now = mpc.getPosition();
+            remoteMpcService.sync(now);
+
+        } catch (IOException | TimeCodeException e) {
+            LOGGER.error(e.getMessage(), e);
+        }
     }
 
     public void update(Observable o, Object arg) {
