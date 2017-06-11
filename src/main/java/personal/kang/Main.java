@@ -34,6 +34,8 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("Hello World");
 
+        primaryStage.setOnCloseRequest(x -> ctx.close());
+
         this.showMainView();
     }
 
