@@ -50,7 +50,7 @@ public class RemoteMpcService {
 //    @Gateway(requestChannel = "syncRequests", replyChannel = "syncResponses")
     void sync(TimeCode timeCode) {
 
-        MessageBuilder msg = MessageBuilder.withPayload(timeCode);
+        MessageBuilder msg = MessageBuilder.withPayload(timeCode.toString());
 
         Map<String, String> headers = new HashMap<>();
         headers.put("cmd", "sync");

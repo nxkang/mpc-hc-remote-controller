@@ -45,12 +45,12 @@ public class RemoteMpcServiceImpl {
 
     }
 
-    public void sync(TimeCode timeCode) {
+    public void sync(String timeCode) {
 
         LOGGER.debug("sync...");
 
         try {
-            mpc.seek(timeCode);
+            mpc.seek(new TimeCode(timeCode));
         } catch (IOException | TimeCodeException e) {
             LOGGER.error(e.getMessage(), e);
         }
