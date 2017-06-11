@@ -17,7 +17,7 @@
     <!--reply-destination-name="outboundPlayResultsDestination"-->
     <!--reply-channel="playResponses"-->
     <jms:outbound-gateway
-            request-destination-name="${request.destination.name}"
+            request-destination-name="${client.request.destination.name}"
             request-channel="mpcRequests"
             connection-factory="jmsConnectionFactory"
             requires-reply="false"/>

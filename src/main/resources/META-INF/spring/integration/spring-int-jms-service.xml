@@ -6,6 +6,8 @@
        xmlns:jms="http://www.springframework.org/schema/integration/jms"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd http://www.springframework.org/schema/integration/jms http://www.springframework.org/schema/integration/jms/spring-integration-jms.xsd">
 
+    <context:property-placeholder location="classpath:jms.properties"></context:property-placeholder>
+
     <context:annotation-config/>
 
     <int:channel
@@ -19,7 +21,7 @@
 
     <jms:inbound-gateway
             request-channel="inboundMpcRequestsChannel"
-            request-destination-name="inboundMpcDestination"
+            request-destination-name="${service.request.destination.name}"
             connection-factory="jmsConnectionFactory"/>
 
     <int:header-value-router input-channel="inboundMpcRequestsChannel" header-name="cmd" default-output-channel="inboundSyncChannel">
